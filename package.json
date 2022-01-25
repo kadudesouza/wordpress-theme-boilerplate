@@ -1,0 +1,24 @@
+{
+  "name": "wp-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Kadu de Souza <contato@kadudesouza.com.br>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-transform-runtime": "^7.10.3",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/runtime": "^7.10.3",
+    "autoprefixer": "^9.8.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.45.0",
+    "browser-sync": "^2.26.7"
+  }
+}
