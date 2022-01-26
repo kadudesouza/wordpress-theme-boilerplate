@@ -19,10 +19,16 @@ function css () {
 		.pipe(browserSync.stream())
 }
 
+function vendorJS () {
+	return src(['node_modules/bootstrap/dist/js/bootstrap.bundle.js'], {
+		base: "node_modules/"
+	})
+	.pipe(concat('vendor.min.js'))
+	.pipe(dest('dist/js'))
+}
+
 function js () {
-	return src([
-		'./src/js/app.js'
-	])
+	return src(['./src/js/app.js'])
 		.pipe(babel({
 			presets: ['@babel/preset-env'],
 		}))
@@ -51,7 +57,7 @@ function server () {
 	watch([
 		'./src/scss/**/*.scss',
 		'./src/js/**/*.js',
-	], parallel(css, js));
+	], parallel(css, js, vendorJS));
 
 	watch([
 		'./src/images/**'
